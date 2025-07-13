@@ -1,0 +1,140 @@
+/*
+etiqueta normal = nada
+etiqueta universal = *
+eiqueta id = #
+etiqueta class = .
+*/
+*{
+    padding: 0; /* Unidades 0 no necesitan px */
+    margin: 0; /* Unidades 0 no necesitan px */
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Muy recomendado para el layout CSS */
+}
+
+body{
+    background-color: #add8e6;
+}
+
+#container{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px gray;
+    border: 1px solid black;
+    background-color: #F0F0F0; 
+}
+
+#header{
+    height: 145px;
+    background: #f0f0f0;
+    /* Añadir display flex o clear-fix si los elementos flotantes dentro causan problemas */
+}
+
+#logo{
+    padding: 20px;
+    margin: 20px;
+    float: left;
+}
+
+#logo img{
+    float: left;
+    height: 100px;
+    /* Si la imagen no está alineada, puedes usar vertical-align: middle; o ajustes de margen */
+}
+
+/* Puedes añadir más estilos aquí para #menu, #content, #lateral, #central, etc. */
+/* Por ejemplo, para los enlaces del menú */
+#menu ul {
+    list-style: none; /* Quita los puntos de la lista */
+}
+
+#menu ul li {
+    display: inline-block; /* Para que los elementos estén en una fila */
+    margin-right: 15px; /* Espacio entre elementos del menú */
+}
+
+#menu ul li a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #333; /* Color del texto */
+    padding: 5px 10px;
+    display: block; /* Para que el padding se aplique correctamente */
+}
+
+#menu ul li a:hover {
+    background-color: #ddd; /* Efecto al pasar el ratón */
+    border-radius: 5px;
+}
+
+/* Estilos para el formulario de login */
+#login {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-top: 20px; /* Espacio superior */
+    border-radius: 5px;
+}
+
+#login h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#login label {
+    display: block; /* Para que cada label esté en su propia línea */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#login input[type="email"],
+#login input[type="password"] {
+    width: calc(100% - 20px); /* Ajusta el ancho para el padding */
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#login input[type="submit"] {
+    background-color: #4CAF50; /* Un color verde para el botón */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#login input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para los productos */
+#central {
+    padding: 20px;
+}
+
+#central h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.lista-productos h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.lista-productos p {
+    margin-bottom: 10px;
+    color: #777;
+    font-size: 1.1em;
+}
+
+/* Estilos para el footer */
+#footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px; /* Espacio entre el contenido y el footer */
+    clear: both; /* Limpia los floats si los hay en el contenido principal */
+}
