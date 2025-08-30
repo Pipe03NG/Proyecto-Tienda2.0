@@ -71,3 +71,5 @@ CREATE TABLE IF NOT EXISTS t_lineas_pedidos(
     CONSTRAINT fk_linea_producto    FOREIGN KEY(id_pedido)           REFERENCES t_productos(id_producto)
 
 )ENGINE=InnoDB;
+
+
