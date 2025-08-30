@@ -59,7 +59,6 @@ CREATE TABLE IF NOT EXISTS t_pedidos(
     CONSTRAINT fk_usuario_pedido    FOREIGN KEY(id_usuario) REFERENCES t_usuarios(id_usuario)
 )ENGINE=InnoDB;
 
-
 CREATE TABLE IF NOT EXISTS t_lineas_pedidos(
     id_lineapedido          int (11) auto_increment         NOT NULL,
     id_pedido               INT(11)                         NOT NULL,                    
@@ -71,7 +70,3 @@ CREATE TABLE IF NOT EXISTS t_lineas_pedidos(
     CONSTRAINT fk_linea_producto    FOREIGN KEY(id_pedido)           REFERENCES t_productos(id_producto)
 
 )ENGINE=InnoDB;
-
-
-
-
