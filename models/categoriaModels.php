@@ -1,34 +1,30 @@
 <?php
 
-    class Categoría{
+
+    class Categoria{
         private $id;
         private $nombre;
 
-
         private $db;
 
-        public function __contruct()
-            {
-            $ths->db = Database::conect();
-            }
+        public function __construct(){
+            $this->db = Database::connect();
+        }
 
-            function getId(){
-             return $this->id;
-            }
+        function getId(){
+            return $this->id;
+        }
 
-            function getId(){
-             return $this->nombre;
-            }
+        function getNombre(){
+            return $this->nombre;
+        }
 
-            function getId($id){
-             return $this->$id;
-            }
+        function setId($id){
+            $this->id=$id;
+        }
 
-             function getId($nombre){
-             return $this->$nombre;
-            }
+        function setNmobre($nombre){
+            $this->nombre=$nombre;
+        }
 
-
-
-            //Hcaer eters y geters de producto
-}
+    }
