@@ -1,5 +1,4 @@
-<?php
-
+<php
 
     class Categoria{
         private $id;
@@ -7,7 +6,8 @@
 
         private $db;
 
-        public function __construct(){
+        public function __construct()
+        {
             $this->db = Database::connect();
         }
 
@@ -20,11 +20,10 @@
         }
 
         function setId($id){
-            $this->id=$id;
+            $this->id = $id;
         }
 
-        function setNmobre($nombre){
-            $this->nombre=$nombre;
+        function setNombre($nombre){
+            $this->nombre = $nombre;
         }
-
     }

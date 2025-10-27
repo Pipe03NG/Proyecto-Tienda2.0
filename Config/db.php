@@ -1,13 +1,11 @@
-<?php
+<?php 
 
-    class Datbase{
+    class Database{
         public static function connect(){
-            
-        //Conexion local
-        
-        $db = new mysqli('localhost','root','','tienda');
-        $db->query("SET NAMES 'UTF8'");
-        return $db;
+            //conexion local
+            $db = new mysqli('localhost','root','','tienda2');
+            $db->query("SET NAMES 'utf8'");
+            return $db;
         }
-    }
 
+    }
