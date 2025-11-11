@@ -82,11 +82,10 @@ body {
 
 #lateral{
     width: 15%;
-    min-height: 600px;
+    min-height: 650px;
     float: left;
     margin-top: 20px;
     margin-left: 10px;
-
 }
 
 #lateral .block_aside{
@@ -108,7 +107,6 @@ body {
     font-weight: bold;
     background: #E1E1E1;
     border: 2px solid #01b1EA;
-    
 }
 
 input[type="text"],
@@ -118,19 +116,18 @@ input[type="email"]{
     width: 95%;
     margin-top: 2px;
     margin-bottom: 2px;
-    border: 1px solid #C9C9C9;
-    box-shadow: 0px 0px 2px #CCC inset;
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
     background: white;
     padding: 2px;
     color: gray;
     transition: all 300ms;
-    
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus{
-    border: 1px solid #1579B5;
+    border: 1px solid #157985;
     color: black;
 }
 
@@ -143,25 +140,24 @@ input[type="submit"],
     padding-left: 10px;
     padding-right: 10px;
     color: white;
-    background: #2979CD;
-    border: 1px solid #040607;
+    background: #2979cd;
+    border: 1px solid #11608e;
     cursor: pointer;
 }
 
 .button{
-    background: #33AE3D;
+    background: #2979cd;
     color: white !important;
     text-decoration: none;
 }
 
 #central{
-    width: 74%;
+    width: 80%;
     min-height: 550px;
     float: right;
     border-left: 1px solid #ccc;
     box-shadow: -5px -1px 5px #ddd;
     padding: 25px;
-
 }
 
 #central h1{
@@ -177,16 +173,17 @@ input[type="submit"],
 
 .product{
     width: 30%;
-    border: 1px solid red;
+    border: 1px solid rgb(167, 167, 167);
     float: left;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 30px;
     text-align: center;
-
+    box-shadow: -5px -1px 7px rgb(143, 143, 143);
 }
+
 .product img{
-    height: 80px;
+    height: 150px;
     margin-bottom: 10px;
 }
 
@@ -197,27 +194,27 @@ input[type="submit"],
 
 .product p{
     font-weight: bold;
-    counter-reset: #555;
+    color: #555;
     margin-bottom: 10px;
 }
 
 .product a{
     color: black;
     text-decoration: none;
-
 }
 
 .product a:hover{
-    color:#555;
+    color: #555;
 }
 
 
+
 #footer{
-    clear:both;
+    clear: both;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 5px;
     background: #222;
     color: white;
-    border-top: 5px solid #01b1EA;
+    border-top: 5px solid #01B1EA;
 }

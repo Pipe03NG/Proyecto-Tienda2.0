@@ -1,9 +1,11 @@
-                </div>
-        </div>
-    <footer id="footer">
-        <p>desarrollado por Washington Nieto &copy; 2025</p>
-    </footer>
-    </div>
-</body>
+ </div>
+ </div>
+ </div>
+ <!-- footer -->
+ <footer id="footer">
+     <p>Desarrollado por Jhorman Cortes &copy; 2025</p>
+ </footer>
+ </div>
+ </body>
 
-</html>
+ </html>

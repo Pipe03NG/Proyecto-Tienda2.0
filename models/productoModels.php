@@ -1,91 +1,117 @@
 <?php
 
-class Producto{
-    private $id;
-    private $nombre;
+require_once 'config/db.php';
+
+class ProductoModels
+{
+    private $id_producto;
+    private $nombre_producto;
     private $descripcion;
     private $precio;
     private $stock;
-    private $categoria_id;
+    private $oferta;
+    private $fecha;
     private $imagen;
-
+    private $id_categoria;
     private $db;
 
-    public function __construct(){
-
+    public function __construct()
+    {
         $this->db = Database::connect();
     }
 
-// GETTERS
-    function getId(){
-        return $this->id;
+    public function getIdProducto()
+    {
+        return $this->id_producto;
     }
 
-    function getNombre(){
-        return $this->nombre;
+    public function getNombreProducto()
+    {
+        return $this->nombre_producto;
     }
 
-    function getDescripcion(){
+    public function getDescripcion()
+    {
         return $this->descripcion;
     }
 
-    function getPrecio(){
-        return $this-> precio;
+    public function getPrecio()
+    {
+        return $this->precio;
     }
 
-    function getStock(){
-        return $this-> stock;
+    public function getStock()
+    {
+        return $this->stock;
     }
 
-    function getoferta(){
-        return $this-> oferta;
+    public function getOferta()
+    {
+        return $this->oferta;
     }
 
-    function getImagen(){
-        return $this-> imagen;
-    }
-    function getid_categoria(){
-        return $this-> id_categoria;
+    public function getFecha()
+    {
+        return $this->fecha;
     }
 
-
-// SETTERS
-    function setId($id){
-        $this->id = $id;
+    public function getImagen()
+    {
+        return $this->imagen;
     }
 
-    function setNombre($nombre){
-        $this->nombre = $nombre;
+    public function getIdCategoria()
+    {
+        return $this->id_categoria;
     }
 
-    function setDescripcion($descripcion){
+    public function setIdProducto($id_producto)
+    {
+        $this->id_producto = $id_producto;
+    }
+
+    public function setNombreProducto($nombre_producto)
+    {
+        $this->nombre_producto = $nombre_producto;
+    }
+
+    public function setDescripcion($descripcion)
+    {
         $this->descripcion = $descripcion;
     }
 
-    function setPrecio($precio){
+    public function setPrecio($precio)
+    {
         $this->precio = $precio;
     }
 
-    function setStock($stock){
+    public function setStock($stock)
+    {
         $this->stock = $stock;
     }
 
-    function setoferta($oferta){
+    public function setOferta($oferta)
+    {
         $this->oferta = $oferta;
     }
 
-    function setImagen($imagen){
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+    }
+
+    public function setImagen($imagen)
+    {
         $this->imagen = $imagen;
     }
 
-    function setid_categoria($id_categoria){
+    public function setIdCategoria($id_categoria)
+    {
         $this->id_categoria = $id_categoria;
     }
 
     public function getAll(){
-        $productos = $this->db->query("SELECT * FROM t_productos ORDER BY id_producto DESC;");
+        $productos = $this->db->query("SELECT * FROM t_productos ORDER by id_producto DESC");
         return $productos;
     }
-
-
 }
