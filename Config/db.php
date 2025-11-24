@@ -1,11 +1,11 @@
-<?php
+<?php 
 
-class Database
-{
-    public static function connect()
-    {
-        $db = new mysqli('localhost', 'root', '', 'tienda');
-        $db->query("SET NAMES 'UTF8'");
-        return $db;
+    class Database{
+        public static function connect(){
+            //conexion local
+            $db = new mysqli('localhost','root','','tienda2');
+            $db->query("SET NAMES 'utf8'");
+            return $db;
+        }
+
     }
-}

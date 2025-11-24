@@ -1,34 +1,29 @@
 <?php
 
-require_once 'config/db.php';
-class Categoria
-{
-    private $id;
-    private $nombre;
-    private $db;
+    class Categoria{
+        private $id;
+        private $nombre;
 
-    public function __construct()
-    {
-        $this->db = Database::connect();
-    }
+        private $db;
 
-    function getId()
-    {
-        return $this->id;
-    }
+        public function __construct()
+        {
+            $this->db = Database::connect();
+        }
 
-    function getNombre()
-    {
-        return $this->nombre;
-    }
+        function getId(){
+            return $this->id;
+        }
 
-    function setId($id)
-    {
-        $this->id = $id;
-    }
+        function getNombre(){
+            return $this->nombre;
+        }
 
-    function setNombre($nombre)
-    {
-        $this->nombre = $nombre;
+        function setId($id){
+            $this->id = $id;
+        }
+
+        function setNombre($nombre){
+            $this->nombre = $nombre;
+        }
     }
-}

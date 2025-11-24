@@ -1,117 +1,94 @@
 <?php
 
-require_once 'config/db.php';
+    class Producto{
+        private $id;
+        private $nombre;
+        private $descripcion;
+        private $precio;
+        private $stock;
+        private $oferta;
+        private $fecha;
+        private $imagen;
+        private $id_categoria;
 
-class ProductoModels
-{
-    private $id_producto;
-    private $nombre_producto;
-    private $descripcion;
-    private $precio;
-    private $stock;
-    private $oferta;
-    private $fecha;
-    private $imagen;
-    private $id_categoria;
-    private $db;
+        private $db;
 
-    public function __construct()
-    {
-        $this->db = Database::connect();
+        public function __construct()
+        {
+            $this->db = Database::connect();
+        }
+
+        function getId(){
+            return $this->id;
+        }
+
+        function getNombre(){
+            return $this->nombre;
+        }
+
+        function getDescripcion(){
+            return $this->nombre;
+        }        
+
+        function getPrecio(){
+            return $this->precio;
+        }        
+
+        function getStock(){
+            return $this->stock;
+        }        
+
+        function getOferta(){
+            return $this->oferta;
+        }        
+
+        function getFecha(){
+            return $this->fecha;
+        }  
+
+        function getImagen(){
+            return $this->imagen;
+        } 
+        
+        function getIdCategoria(){
+            return $this->categoria;
+        } 
+        
+        function setId($id){
+            $this->id = $id;
+        }
+
+        function setNombre($nombre){
+            $this->nombre = $nombre;
+        }
+
+        function setDescripcion($descripcion){
+            $this->descripcion = $descripcion;
+        }
+
+        function setPrecio($precio){
+            $this->precio = $precio;
+        }    
+        
+        function setStock($stock){
+            $this->stock = $stock;
+        }  
+        
+        function setOferta($oferta){
+            $this->oferta = $oferta;
+        }          
+
+        function setImagen($imagen){
+            $this->imagen = $imagen;
+        }  
+        
+        function setIdCategoria($id_categoria){
+            $this->id_categoria = $id_categoria;
+        }    
+        
+        public function getAll(){
+            $productos = $this->db->query("SELECT * FROM t_productos ORDER by id_producto DESC");
+            return $productos;
+        }
+        
     }
-
-    public function getIdProducto()
-    {
-        return $this->id_producto;
-    }
-
-    public function getNombreProducto()
-    {
-        return $this->nombre_producto;
-    }
-
-    public function getDescripcion()
-    {
-        return $this->descripcion;
-    }
-
-    public function getPrecio()
-    {
-        return $this->precio;
-    }
-
-    public function getStock()
-    {
-        return $this->stock;
-    }
-
-    public function getOferta()
-    {
-        return $this->oferta;
-    }
-
-    public function getFecha()
-    {
-        return $this->fecha;
-    }
-
-    public function getImagen()
-    {
-        return $this->imagen;
-    }
-
-    public function getIdCategoria()
-    {
-        return $this->id_categoria;
-    }
-
-    public function setIdProducto($id_producto)
-    {
-        $this->id_producto = $id_producto;
-    }
-
-    public function setNombreProducto($nombre_producto)
-    {
-        $this->nombre_producto = $nombre_producto;
-    }
-
-    public function setDescripcion($descripcion)
-    {
-        $this->descripcion = $descripcion;
-    }
-
-    public function setPrecio($precio)
-    {
-        $this->precio = $precio;
-    }
-
-    public function setStock($stock)
-    {
-        $this->stock = $stock;
-    }
-
-    public function setOferta($oferta)
-    {
-        $this->oferta = $oferta;
-    }
-
-    public function setFecha($fecha)
-    {
-        $this->fecha = $fecha;
-    }
-
-    public function setImagen($imagen)
-    {
-        $this->imagen = $imagen;
-    }
-
-    public function setIdCategoria($id_categoria)
-    {
-        $this->id_categoria = $id_categoria;
-    }
-
-    public function getAll(){
-        $productos = $this->db->query("SELECT * FROM t_productos ORDER by id_producto DESC");
-        return $productos;
-    }
-}
